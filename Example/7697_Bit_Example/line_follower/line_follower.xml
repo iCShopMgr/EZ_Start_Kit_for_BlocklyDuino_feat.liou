@@ -1,0 +1,94 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="controls_if" id="125" inline="false">
+            <mutation elseif="2" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="138" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="mooncar_tracker" id="119"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="149">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="mooncar_move_motor" id="189" inline="true">
+                <value name="SPEED_L">
+                  <block type="math_number" id="190">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <value name="SPEED_R">
+                  <block type="math_number" id="191">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="192" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="mooncar_tracker" id="193"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="194">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="mooncar_move_motor" id="195" inline="true">
+                <value name="SPEED_L">
+                  <block type="math_number" id="196">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="SPEED_R">
+                  <block type="math_number" id="197">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="198" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="mooncar_tracker" id="199"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="200">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="mooncar_move_motor" id="201" inline="true">
+                <value name="SPEED_L">
+                  <block type="math_number" id="202">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <value name="SPEED_R">
+                  <block type="math_number" id="203">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

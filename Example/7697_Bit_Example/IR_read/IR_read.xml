@@ -1,0 +1,40 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="serial_init" id="56">
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="mooncar_ir_remote_read" id="42">
+            <statement name="IR_READ">
+              <block type="serial_print" id="217" inline="false">
+                <value name="CONTENT">
+                  <block type="mooncar_ir_remote_read_value" id="112"></block>
+                </value>
+                <next>
+                  <block type="serial_print" id="215" inline="false">
+                    <value name="CONTENT">
+                      <block type="text" id="216">
+                        <field name="TEXT">, </field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="serial_println" id="64" inline="false">
+                        <value name="CONTENT">
+                          <block type="mooncar_ir_remote_read_type" id="207"></block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

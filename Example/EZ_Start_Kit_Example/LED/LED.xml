@@ -1,0 +1,218 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="469" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="470">
+        <statement name="CONTENT">
+          <block type="controls_for" id="471" inline="true">
+            <field name="VAR">i</field>
+            <value name="FROM">
+              <block type="math_number" id="472">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number" id="473">
+                <field name="NUM">255</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="ez_start_kit_led" id="474" inline="true">
+                <field name="EZ_LED">red</field>
+                <value name="LVALUE">
+                  <block type="variables_get" id="475">
+                    <field name="TYPE">Number</field>
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="delay_custom" id="476" inline="false">
+                    <value name="DELAY_TIME">
+                      <block type="math_number" id="477">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_for" id="478" inline="true">
+                <field name="VAR">i</field>
+                <value name="FROM">
+                  <block type="math_number" id="479">
+                    <field name="NUM">255</field>
+                  </block>
+                </value>
+                <value name="TO">
+                  <block type="math_number" id="480">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="ez_start_kit_led" id="481" inline="true">
+                    <field name="EZ_LED">red</field>
+                    <value name="LVALUE">
+                      <block type="variables_get" id="482">
+                        <field name="TYPE">Number</field>
+                        <field name="VAR">i</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay_custom" id="483" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="484">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_for" id="485" inline="true">
+                    <field name="VAR">i</field>
+                    <value name="FROM">
+                      <block type="math_number" id="486">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="math_number" id="487">
+                        <field name="NUM">255</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="ez_start_kit_led" id="488" inline="true">
+                        <field name="EZ_LED">yellow</field>
+                        <value name="LVALUE">
+                          <block type="variables_get" id="489">
+                            <field name="TYPE">Number</field>
+                            <field name="VAR">i</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="delay_custom" id="490" inline="false">
+                            <value name="DELAY_TIME">
+                              <block type="math_number" id="491">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_for" id="492" inline="true">
+                        <field name="VAR">i</field>
+                        <value name="FROM">
+                          <block type="math_number" id="493">
+                            <field name="NUM">255</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="math_number" id="494">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="ez_start_kit_led" id="495" inline="true">
+                            <field name="EZ_LED">yellow</field>
+                            <value name="LVALUE">
+                              <block type="variables_get" id="496">
+                                <field name="TYPE">Number</field>
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="delay_custom" id="497" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="498">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_for" id="499" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="FROM">
+                              <block type="math_number" id="500">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="TO">
+                              <block type="math_number" id="501">
+                                <field name="NUM">255</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="ez_start_kit_led" id="502" inline="true">
+                                <field name="EZ_LED">green</field>
+                                <value name="LVALUE">
+                                  <block type="variables_get" id="503">
+                                    <field name="TYPE">Number</field>
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="delay_custom" id="504" inline="false">
+                                    <value name="DELAY_TIME">
+                                      <block type="math_number" id="505">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_for" id="506" inline="true">
+                                <field name="VAR">i</field>
+                                <value name="FROM">
+                                  <block type="math_number" id="507">
+                                    <field name="NUM">255</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+                                  <block type="math_number" id="508">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="ez_start_kit_led" id="509" inline="true">
+                                    <field name="EZ_LED">green</field>
+                                    <value name="LVALUE">
+                                      <block type="variables_get" id="510">
+                                        <field name="TYPE">Number</field>
+                                        <field name="VAR">i</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="delay_custom" id="511" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="512">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

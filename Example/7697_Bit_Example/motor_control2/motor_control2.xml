@@ -1,0 +1,123 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="204" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="205">
+        <statement name="CONTENT">
+          <block type="mooncar_move_motor" id="210" inline="true">
+            <value name="SPEED_L">
+              <block type="math_number" id="211">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <value name="SPEED_R">
+              <block type="math_number" id="212">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="delay_custom" id="236" inline="false">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="237">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="mooncar_move_motor" id="216" inline="true">
+                    <value name="SPEED_L">
+                      <block type="math_number" id="217">
+                        <field name="NUM">-200</field>
+                      </block>
+                    </value>
+                    <value name="SPEED_R">
+                      <block type="math_number" id="218">
+                        <field name="NUM">-200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay_custom" id="238" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="239">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="mooncar_move_motor" id="241" inline="true">
+                            <value name="SPEED_L">
+                              <block type="math_number" id="242">
+                                <field name="NUM">-200</field>
+                              </block>
+                            </value>
+                            <value name="SPEED_R">
+                              <block type="math_number" id="243">
+                                <field name="NUM">200</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="delay_custom" id="244" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="245">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="mooncar_move_motor" id="246" inline="true">
+                                    <value name="SPEED_L">
+                                      <block type="math_number" id="247">
+                                        <field name="NUM">200</field>
+                                      </block>
+                                    </value>
+                                    <value name="SPEED_R">
+                                      <block type="math_number" id="248">
+                                        <field name="NUM">-200</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="delay_custom" id="249" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="250">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="mooncar_move_motor" id="251" inline="true">
+                                            <value name="SPEED_L">
+                                              <block type="math_number" id="252">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <value name="SPEED_R">
+                                              <block type="math_number" id="253">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="delay_custom" id="254" inline="false">
+                                                <value name="DELAY_TIME">
+                                                  <block type="math_number" id="255">
+                                                    <field name="NUM">1000</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

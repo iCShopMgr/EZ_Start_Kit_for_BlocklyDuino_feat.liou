@@ -1,0 +1,132 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="neopixel_begin" id="42">
+        <field name="NUM">8</field>
+        <field name="PIN">4</field>
+        <field name="BRIGHTNESS">30</field>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="controls_for" id="136" inline="true">
+            <field name="VAR">i</field>
+            <value name="FROM">
+              <block type="math_number" id="137">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number" id="138">
+                <field name="NUM">8</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="neopixel_setpixelcolor" id="82" inline="true">
+                <field name="RGB">#ff0000</field>
+                <value name="TARGET">
+                  <block type="variables_get" id="143">
+                    <field name="TYPE">Number</field>
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="neopixel_show" id="123">
+                <next>
+                  <block type="delay_custom" id="155" inline="false">
+                    <value name="DELAY_TIME">
+                      <block type="math_number" id="156">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_for" id="158" inline="true">
+                        <field name="VAR">i</field>
+                        <value name="FROM">
+                          <block type="math_number" id="159">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="math_number" id="160">
+                            <field name="NUM">8</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="neopixel_setpixelcolor" id="161" inline="true">
+                            <field name="RGB">#33ff33</field>
+                            <value name="TARGET">
+                              <block type="variables_get" id="162">
+                                <field name="TYPE">Number</field>
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="neopixel_show" id="163">
+                            <next>
+                              <block type="delay_custom" id="164" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="165">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_for" id="166" inline="true">
+                                    <field name="VAR">i</field>
+                                    <value name="FROM">
+                                      <block type="math_number" id="167">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <value name="TO">
+                                      <block type="math_number" id="168">
+                                        <field name="NUM">8</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="neopixel_setpixelcolor" id="169" inline="true">
+                                        <field name="RGB">#3333ff</field>
+                                        <value name="TARGET">
+                                          <block type="variables_get" id="170">
+                                            <field name="TYPE">Number</field>
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="neopixel_show" id="171">
+                                        <next>
+                                          <block type="delay_custom" id="172" inline="false">
+                                            <value name="DELAY_TIME">
+                                              <block type="math_number" id="173">
+                                                <field name="NUM">1000</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

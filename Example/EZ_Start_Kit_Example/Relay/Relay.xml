@@ -1,0 +1,109 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="23" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_oled_display_setting" id="24">
+        <next>
+          <block type="ez_start_kit_oled_display_clear" id="25"></block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="26">
+        <statement name="CONTENT">
+          <block type="ez_start_kit_oled_display_draw_commands" id="27">
+            <statement name="DRAW_CMD">
+              <block type="ez_start_kit_relay" id="28">
+                <field name="EZ_RELAY">ON</field>
+                <next>
+                  <block type="oled_display_draw_text" id="29" inline="true">
+                    <value name="START_X">
+                      <block type="math_number" id="30">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="START_Y">
+                      <block type="math_number" id="31">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="CONTENT">
+                      <block type="text_join" id="32" inline="false">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="33">
+                            <field name="TEXT">Relay: </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="34">
+                            <field name="TEXT">ON</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay_custom" id="35" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="36">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="ez_start_kit_oled_display_draw_commands" id="46">
+                <statement name="DRAW_CMD">
+                  <block type="ez_start_kit_relay" id="37">
+                    <field name="EZ_RELAY">OFF</field>
+                    <next>
+                      <block type="oled_display_draw_text" id="38" inline="true">
+                        <value name="START_X">
+                          <block type="math_number" id="39">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="START_Y">
+                          <block type="math_number" id="40">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="CONTENT">
+                          <block type="text_join" id="41" inline="false">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="42">
+                                <field name="TEXT">Relay: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="43">
+                                <field name="TEXT">OFF</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="delay_custom" id="44" inline="false">
+                            <value name="DELAY_TIME">
+                              <block type="math_number" id="45">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,63 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="ez_start_kit_tone" id="175">
+            <field name="FREQ">262</field>
+            <next>
+              <block type="delay_custom" id="270" inline="false">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="271">
+                    <field name="NUM">300</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="ez_start_kit_tone" id="213">
+                    <field name="FREQ">330</field>
+                    <next>
+                      <block type="delay_custom" id="272" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="273">
+                            <field name="NUM">300</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="ez_start_kit_tone" id="214">
+                            <field name="FREQ">392</field>
+                            <next>
+                              <block type="delay_custom" id="274" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="275">
+                                    <field name="NUM">300</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="ez_start_kit_no_tone" id="212">
+                                    <next>
+                                      <block type="delay_custom" id="276" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="277">
+                                            <field name="NUM">3000</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

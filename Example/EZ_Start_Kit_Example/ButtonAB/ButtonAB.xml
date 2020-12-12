@@ -1,0 +1,122 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="41" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_oled_display_setting" id="142">
+        <next>
+          <block type="ez_start_kit_oled_display_clear" id="181"></block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="44">
+        <statement name="CONTENT">
+          <block type="controls_if" id="45" inline="false">
+            <mutation elseif="2" else="1"></mutation>
+            <value name="IF0">
+              <block type="ez_start_kit_button" id="220">
+                <field name="AB_BUTTON">AB_</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="47" inline="true">
+                <field name="TYPE">String</field>
+                <field name="VAR">Bstate</field>
+                <value name="VALUE">
+                  <block type="text" id="48">
+                    <field name="TEXT">AB</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="ez_start_kit_button" id="221">
+                <field name="AB_BUTTON">A_</field>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="variables_set" id="50" inline="true">
+                <field name="TYPE">String</field>
+                <field name="VAR">Bstate</field>
+                <value name="VALUE">
+                  <block type="text" id="51">
+                    <field name="TEXT">A</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="ez_start_kit_button" id="222">
+                <field name="AB_BUTTON">B_</field>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="variables_set" id="53" inline="true">
+                <field name="TYPE">String</field>
+                <field name="VAR">Bstate</field>
+                <value name="VALUE">
+                  <block type="text" id="54">
+                    <field name="TEXT">B</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="variables_set" id="55" inline="true">
+                <field name="TYPE">String</field>
+                <field name="VAR">Bstate</field>
+                <value name="VALUE">
+                  <block type="text" id="56">
+                    <field name="TEXT">None</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="ez_start_kit_oled_display_draw_commands" id="261">
+                <statement name="DRAW_CMD">
+                  <block type="oled_display_draw_text" id="58" inline="true">
+                    <value name="START_X">
+                      <block type="math_number" id="59">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="START_Y">
+                      <block type="math_number" id="60">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="CONTENT">
+                      <block type="text_join" id="61" inline="false">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="62">
+                            <field name="TEXT">State: </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="63">
+                            <field name="TYPE">String</field>
+                            <field name="VAR">Bstate</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="delay_custom" id="64" inline="false">
+                    <value name="DELAY_TIME">
+                      <block type="math_number" id="65">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

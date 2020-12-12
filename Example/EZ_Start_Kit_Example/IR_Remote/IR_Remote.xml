@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="248" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_oled_display_setting" id="304">
+        <next>
+          <block type="ez_start_kit_oled_display_clear" id="343"></block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="251">
+        <statement name="CONTENT">
+          <block type="ez_start_kit_remote_read" id="252">
+            <statement name="IR_READ">
+              <block type="ez_start_kit_oled_display_draw_commands" id="382">
+                <statement name="DRAW_CMD">
+                  <block type="oled_display_draw_text" id="254" inline="true">
+                    <value name="START_X">
+                      <block type="math_number" id="255">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="START_Y">
+                      <block type="math_number" id="256">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="CONTENT">
+                      <block type="text_join" id="257" inline="false">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="258">
+                            <field name="TEXT">Code: </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="ez_start_kit_ir_remote_read_value" id="259"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_display_draw_text" id="260" inline="true">
+                        <value name="START_X">
+                          <block type="math_number" id="261">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="START_Y">
+                          <block type="math_number" id="262">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="CONTENT">
+                          <block type="text_join" id="263" inline="false">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="264">
+                                <field name="TEXT">Type: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="ez_start_kit_ir_remote_read_type" id="265"></block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

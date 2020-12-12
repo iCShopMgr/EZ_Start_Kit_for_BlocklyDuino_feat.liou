@@ -1,0 +1,89 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_oled_display_setting" id="41">
+        <next>
+          <block type="ez_start_kit_oled_display_clear" id="119"></block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="ez_start_kit_oled_display_set_font" id="206">
+            <field name="FONT">u8g2_font_6x10_mf</field>
+            <next>
+              <block type="ez_start_kit_oled_display_draw_commands" id="158">
+                <statement name="DRAW_CMD">
+                  <block type="oled_display_draw_text" id="159" inline="true">
+                    <value name="START_X">
+                      <block type="math_number" id="160">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="START_Y">
+                      <block type="math_number" id="161">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="CONTENT">
+                      <block type="text" id="162">
+                        <field name="TEXT">HELLO</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="delay_custom" id="229" inline="false">
+                    <value name="DELAY_TIME">
+                      <block type="math_number" id="230">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="ez_start_kit_oled_display_set_font" id="207">
+                        <field name="FONT">u8g2_font_8x13_mf</field>
+                        <next>
+                          <block type="ez_start_kit_oled_display_draw_commands" id="208">
+                            <statement name="DRAW_CMD">
+                              <block type="oled_display_draw_text" id="209" inline="true">
+                                <value name="START_X">
+                                  <block type="math_number" id="210">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <value name="START_Y">
+                                  <block type="math_number" id="211">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <value name="CONTENT">
+                                  <block type="text" id="212">
+                                    <field name="TEXT">HELLO</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="delay_custom" id="231" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="232">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

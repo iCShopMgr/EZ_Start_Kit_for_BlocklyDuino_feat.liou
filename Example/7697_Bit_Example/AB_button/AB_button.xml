@@ -1,0 +1,60 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="serial_init" id="95">
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="controls_if" id="48" inline="false">
+            <mutation elseif="2" else="1"></mutation>
+            <value name="IF0">
+              <block type="mooncar_button" id="42">
+                <field name="AB_BUTTON">AB_</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="serial_println" id="103" inline="false">
+                <value name="CONTENT">
+                  <block type="text" id="104">
+                    <field name="TEXT">AB</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="mooncar_button" id="110">
+                <field name="AB_BUTTON">A_</field>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="serial_println" id="117" inline="false">
+                <value name="CONTENT">
+                  <block type="text" id="118">
+                    <field name="TEXT">A</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="mooncar_button" id="119">
+                <field name="AB_BUTTON">B_</field>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="serial_println" id="120" inline="false">
+                <value name="CONTENT">
+                  <block type="text" id="121">
+                    <field name="TEXT">B</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

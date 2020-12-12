@@ -1,0 +1,56 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="mooncar_init_tcs" id="42">
+        <next>
+          <block type="serial_init" id="174">
+            <field name="SPEED">9600</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="serial_println" id="182" inline="false">
+            <value name="CONTENT">
+              <block type="text_join" id="199" inline="false">
+                <mutation items="6"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="192">
+                    <field name="TEXT">R: </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="mooncar_read_tcs" id="161">
+                    <field name="TCS">RED</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="text" id="208">
+                    <field name="TEXT">, G: </field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="mooncar_read_tcs" id="209">
+                    <field name="TCS">GREEN</field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="text" id="210">
+                    <field name="TEXT">, B: </field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="mooncar_read_tcs" id="211">
+                    <field name="TCS">BLUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

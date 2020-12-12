@@ -1,0 +1,38 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="oled_display_setting" id="42">
+        <field name="CHIPSET">SSD1306</field>
+        <field name="PIN">PIN</field>
+        <field name="RESOLUTION">128x64</field>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="oled_display_draw_commands" id="82">
+            <statement name="DRAW_CMD">
+              <block type="oled_display_draw_text" id="83" inline="true">
+                <value name="START_X">
+                  <block type="math_number" id="84">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="START_Y">
+                  <block type="math_number" id="85">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="CONTENT">
+                  <block type="text" id="86">
+                    <field name="TEXT">HELLO</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

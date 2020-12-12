@@ -1,0 +1,53 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="serial_init" id="236">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="mooncar_init_tcs" id="42">
+            <next>
+              <block type="controls_while" id="137" inline="false">
+                <value name="BOOL">
+                  <block type="logic_negate" id="144" inline="false">
+                    <value name="BOOL">
+                      <block type="mooncar_button" id="122">
+                        <field name="AB_BUTTON">A_</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="mooncar_record_tcs" id="82">
+                    <field name="RECORD_TCS">RED</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="controls_if" id="224" inline="false">
+            <value name="IF0">
+              <block type="mooncar_chack_tcs" id="218">
+                <field name="RECORD_TCS">RED</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="serial_println" id="244" inline="false">
+                <value name="CONTENT">
+                  <block type="text" id="245">
+                    <field name="TEXT">Red</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

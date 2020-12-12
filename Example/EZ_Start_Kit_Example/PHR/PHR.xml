@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="571" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_oled_display_setting" id="622">
+        <next>
+          <block type="ez_start_kit_oled_display_clear" id="661"></block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="574">
+        <statement name="CONTENT">
+          <block type="ez_start_kit_oled_display_draw_commands" id="700">
+            <statement name="DRAW_CMD">
+              <block type="oled_display_draw_text" id="576" inline="true">
+                <value name="START_X">
+                  <block type="math_number" id="577">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="START_Y">
+                  <block type="math_number" id="578">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="CONTENT">
+                  <block type="text_join" id="579" inline="false">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="580">
+                        <field name="TEXT">PHR: </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="ez_start_kit_phr" id="581"></block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="delay_custom" id="582" inline="false">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="583">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,183 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="896" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="ez_start_kit_neopixel_begin" id="897" inline="true">
+        <value name="NVALUE">
+          <block type="math_number" id="898">
+            <field name="NUM">30</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="899">
+        <statement name="CONTENT">
+          <block type="controls_for" id="900" inline="true">
+            <field name="VAR">i</field>
+            <value name="FROM">
+              <block type="math_number" id="901">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number" id="902">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="ez_start_kit_neopixel_setpixelcolor" id="903" inline="true">
+                <field name="RGB">#ff0000</field>
+                <value name="TARGET">
+                  <block type="variables_get" id="904">
+                    <field name="TYPE">Number</field>
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="ez_start_kit_neopixel_show" id="905"></block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="delay_custom" id="906" inline="false">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="907">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_for" id="908" inline="true">
+                    <field name="VAR">i</field>
+                    <value name="FROM">
+                      <block type="math_number" id="909">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="math_number" id="910">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="ez_start_kit_neopixel_setpixelcolor" id="911" inline="true">
+                        <field name="RGB">#33ff33</field>
+                        <value name="TARGET">
+                          <block type="variables_get" id="912">
+                            <field name="TYPE">Number</field>
+                            <field name="VAR">i</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="ez_start_kit_neopixel_show" id="913"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="delay_custom" id="914" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="915">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_for" id="916" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="FROM">
+                              <block type="math_number" id="917">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="TO">
+                              <block type="math_number" id="918">
+                                <field name="NUM">2</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="ez_start_kit_neopixel_setpixelcolor" id="919" inline="true">
+                                <field name="RGB">#6666cc</field>
+                                <value name="TARGET">
+                                  <block type="variables_get" id="920">
+                                    <field name="TYPE">Number</field>
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="ez_start_kit_neopixel_show" id="921"></block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="delay_custom" id="922" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="923">
+                                    <field name="NUM">500</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_for" id="924" inline="true">
+                                    <field name="VAR">i</field>
+                                    <value name="FROM">
+                                      <block type="math_number" id="925">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <value name="TO">
+                                      <block type="math_number" id="926">
+                                        <field name="NUM">2</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="ez_start_kit_neopixel_custom_setpixelcolor" id="927" inline="true">
+                                        <value name="TARGET">
+                                          <block type="variables_get" id="928">
+                                            <field name="TYPE">Number</field>
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
+                                        <value name="R">
+                                          <block type="math_number" id="929">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <value name="G">
+                                          <block type="math_number" id="930">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="931">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="ez_start_kit_neopixel_show" id="932"></block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="delay_custom" id="933" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="934">
+                                            <field name="NUM">500</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,46 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="controls_if" id="89" inline="false">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="95" inline="true">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="mooncar_sonar" id="42"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="106">
+                    <field name="NUM">12</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="mooncar_move_car" id="82" inline="true">
+                <field name="STAT">FORWARD</field>
+                <value name="SPEED">
+                  <block type="math_number" id="83">
+                    <field name="NUM">150</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="mooncar_move_car" id="111" inline="true">
+                <field name="STAT">LEFT</field>
+                <value name="SPEED">
+                  <block type="math_number" id="112">
+                    <field name="NUM">150</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

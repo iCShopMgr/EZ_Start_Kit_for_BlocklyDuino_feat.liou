@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <next>
+      <block type="initializes_loop" id="2">
+        <statement name="CONTENT">
+          <block type="mooncar_move_car" id="42" inline="true">
+            <field name="STAT">FORWARD</field>
+            <value name="SPEED">
+              <block type="math_number" id="43">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="delay_custom" id="55" inline="false">
+                <value name="DELAY_TIME">
+                  <block type="math_number" id="56">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="mooncar_move_car" id="58" inline="true">
+                    <field name="STAT">BACKWARD</field>
+                    <value name="SPEED">
+                      <block type="math_number" id="59">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay_custom" id="60" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="61">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="mooncar_move_car" id="63" inline="true">
+                            <field name="STAT">LEFT</field>
+                            <value name="SPEED">
+                              <block type="math_number" id="64">
+                                <field name="NUM">200</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="delay_custom" id="65" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="66">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="mooncar_move_car" id="67" inline="true">
+                                    <field name="STAT">RIGHT</field>
+                                    <value name="SPEED">
+                                      <block type="math_number" id="68">
+                                        <field name="NUM">200</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="delay_custom" id="69" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="70">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="mooncar_move_car" id="71" inline="true">
+                                            <field name="STAT">STOP</field>
+                                            <value name="SPEED">
+                                              <block type="math_number" id="72">
+                                                <field name="NUM">200</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="delay_custom" id="73" inline="false">
+                                                <value name="DELAY_TIME">
+                                                  <block type="math_number" id="74">
+                                                    <field name="NUM">1000</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

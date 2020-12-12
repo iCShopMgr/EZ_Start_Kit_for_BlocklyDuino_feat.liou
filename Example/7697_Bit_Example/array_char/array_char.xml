@@ -1,0 +1,61 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="serial_init" id="135">
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set" id="53" inline="true">
+            <field name="TYPE">Array2</field>
+            <field name="VAR">item</field>
+            <value name="VALUE">
+              <block type="array_create_with" id="50" inline="false">
+                <mutation items="1"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="68">
+                    <field name="TEXT">Hello</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="array_modify" id="115" inline="false">
+                <value name="name">
+                  <block type="variables_get" id="119">
+                    <field name="TYPE">Array2</field>
+                    <field name="VAR">item</field>
+                  </block>
+                </value>
+                <value name="indice">
+                  <block type="math_number" id="116">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <value name="value">
+                  <block type="math_number" id="127">
+                    <field name="NUM">104</field>
+                    <comment pinned="true" h="80" w="160">ASCII:
+104 = h
+                    </comment>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_println" id="143" inline="false">
+                    <value name="CONTENT">
+                      <block type="variables_get" id="147">
+                        <field name="TYPE">Array2</field>
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="2"></block>
+    </next>
+  </block>
+</xml>

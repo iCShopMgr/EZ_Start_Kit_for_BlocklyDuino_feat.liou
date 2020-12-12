@@ -1,0 +1,135 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="initializes_setup" id="1129" x="80" y="40">
+    <statement name="CONTENT">
+      <block type="oled_display_setting" id="1130">
+        <field name="CHIPSET">SSD1306</field>
+        <field name="PIN">PIN</field>
+        <field name="RESOLUTION">128x64</field>
+        <next>
+          <block type="serial_init" id="1131">
+            <field name="SPEED">115200</field>
+            <next>
+              <block type="m5_stack_v_serial_set" id="1132">
+                <field name="RX_PIN">2</field>
+                <field name="TX_PIN">3</field>
+                <next>
+                  <block type="controls_while" id="1133" inline="false">
+                    <value name="BOOL">
+                      <block type="logic_negate" id="1134" inline="false">
+                        <value name="BOOL">
+                          <block type="mooncar_button" id="1135">
+                            <field name="AB_BUTTON">A_</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="m5_stack_v_motion_detect_mode" id="1136">
+                        <field name="m5_motion_detect_mode">m5_dynamic</field>
+                        <next>
+                          <block type="mooncar_face_show" id="1137">
+                            <field name="FACE_SHOW">F3</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="initializes_loop" id="1138">
+        <statement name="CONTENT">
+          <block type="controls_if" id="1139" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" id="1140" inline="true">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="m5_stack_v_motion_detect_main" id="1141">
+                    <field name="m5_stack_v_motion_detect_main">m5_diff_max</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="1142">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="mooncar_face_show" id="1143">
+                <field name="FACE_SHOW">F9</field>
+                <next>
+                  <block type="mooncar_move_car" id="1144" inline="true">
+                    <field name="STAT">BACKWARD</field>
+                    <value name="SPEED">
+                      <block type="math_number" id="1145">
+                        <field name="NUM">255</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay_custom" id="1146" inline="false">
+                        <value name="DELAY_TIME">
+                          <block type="math_number" id="1147">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="mooncar_move_car" id="1148" inline="true">
+                            <field name="STAT">FORWARD</field>
+                            <value name="SPEED">
+                              <block type="math_number" id="1149">
+                                <field name="NUM">50</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="delay_custom" id="1150" inline="false">
+                                <value name="DELAY_TIME">
+                                  <block type="math_number" id="1151">
+                                    <field name="NUM">300</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="mooncar_move_car" id="1152" inline="true">
+                                    <field name="STAT">STOP</field>
+                                    <value name="SPEED">
+                                      <block type="math_number" id="1153">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="delay_custom" id="1154" inline="false">
+                                        <value name="DELAY_TIME">
+                                          <block type="math_number" id="1155">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="mooncar_face_show" id="1156">
+                                            <field name="FACE_SHOW">F3</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
