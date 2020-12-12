@@ -1,4 +1,5 @@
 # 更新資訊
+* 2020/12/12 新增PCA9685。
 * 2020/11/20 開啟EEPROM至視窗列表，並新增NFC/RFID讀寫功能。
 * 2020/10/30 新增M5Stack官方對於M5Stick V支援的影像功能。
 * 將原先使用M5Stack CORE作為核心控制M5Stick V的部份，更改為LinkIt 7697。
@@ -16,6 +17,7 @@ https://docs.m5stack.com/#/en/quick_start/unitv/v_function
 * 0730 新增可輸入XBM自訂圖案的積木
 * 1030 新增M5Stack官方對於M5Stick V支援的影像功能
 * 1120 開啟EEPROM至視窗列表，並新增NFC/RFID讀寫功能。
+* 1212 新增PCA9685。
 
 # 自訂OLED顯示圖案教學步驟
 * 首先下載並解壓縮BlocklyDuino V3 主程式，測試用版本是下載blocklyduino-3.0.312b-win64-ide.zip，連結如下：
